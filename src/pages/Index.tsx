@@ -19,46 +19,45 @@ const Index = () => {
   const quizEvents = [
     {
       id: 1,
-      date: '15 февраля',
-      time: '19:00',
-      available: 12,
-      total: 40,
-      price: 500,
-      theme: 'Кино и сериалы'
+      date: '8 февраля',
+      time: '18:00',
+      price: 600,
+      theme: 'КиноКвиз'
     },
     {
       id: 2,
-      date: '22 февраля',
-      time: '19:00',
-      available: 8,
-      total: 40,
-      price: 500,
-      theme: 'Музыка и поп-культура'
+      date: '12 февраля',
+      time: '18:00',
+      price: 600,
+      theme: 'Русский рок'
     },
     {
       id: 3,
-      date: '1 марта',
-      time: '19:00',
-      available: 25,
-      total: 40,
-      price: 500,
-      theme: 'История и наука'
+      date: '15 февраля',
+      time: '18:00',
+      price: 600,
+      theme: 'Аморе Аморе и все о любви'
     },
     {
       id: 4,
-      date: '8 марта',
-      time: '20:00',
-      available: 5,
-      total: 40,
+      date: '19 февраля',
+      time: '18:00',
       price: 600,
-      theme: 'Праздничный спецвыпуск'
+      theme: 'Детективная игра'
+    },
+    {
+      id: 5,
+      date: '22 февраля',
+      time: '18:00',
+      price: 600,
+      theme: 'Мужской стиль'
     }
   ];
 
   const rules = [
     {
       title: 'Состав команды',
-      content: 'Команда от 2 до 6 человек. Можно прийти одному — мы поможем найти команду!'
+      content: 'Команда от 2 до 10 человек. Можно прийти одному — мы поможем найти команду!'
     },
     {
       title: 'Регистрация',
@@ -158,12 +157,12 @@ const Index = () => {
               <div className="text-sm text-muted-foreground">Стоимость участия</div>
             </div>
             <div className="text-center animate-scale-in" style={{ animationDelay: '0.7s' }}>
-              <div className="text-4xl font-bold text-secondary mb-2">40</div>
-              <div className="text-sm text-muted-foreground">Мест в зале</div>
+              <div className="text-4xl font-bold text-primary mb-2">2-10</div>
+              <div className="text-sm text-muted-foreground">Человек в команде</div>
             </div>
             <div className="text-center animate-scale-in" style={{ animationDelay: '0.8s' }}>
-              <div className="text-4xl font-bold text-primary mb-2">2-6</div>
-              <div className="text-sm text-muted-foreground">Человек в команде</div>
+              <div className="text-4xl font-bold text-secondary mb-2">5</div>
+              <div className="text-sm text-muted-foreground">Квизов в месяц</div>
             </div>
           </div>
         </div>
@@ -212,18 +211,6 @@ const Index = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2 text-sm">
-                      <Icon name="Users" size={16} className="text-muted-foreground" />
-                      <span>Свободно {quiz.available} из {quiz.total} мест</span>
-                    </div>
-                    <div className="w-24 bg-muted rounded-full h-2">
-                      <div 
-                        className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full transition-all"
-                        style={{ width: `${(quiz.available / quiz.total) * 100}%` }}
-                      />
-                    </div>
-                  </div>
                   <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90">
                     <Icon name="Ticket" className="mr-2" size={18} />
                     Забронировать
@@ -304,20 +291,7 @@ const Index = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-muted-foreground">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
-                      <Icon name="Trophy" className="text-yellow-500" size={20} />
-                      <span>1 место — 5000₽ + сертификат в бар</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Icon name="Medal" className="text-gray-400" size={20} />
-                      <span>2 место — 3000₽ + сертификат</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Icon name="Award" className="text-orange-600" size={20} />
-                      <span>3 место — 1000₽ + сертификат</span>
-                    </div>
-                  </div>
+                  <p>Победители получают призы от наших партнёров, а также специальные подарки от клуба Адам и Ева!</p>
                 </CardContent>
               </Card>
             </div>
