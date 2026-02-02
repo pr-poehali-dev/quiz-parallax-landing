@@ -64,10 +64,6 @@ const Index = () => {
       content: 'Бронируйте место минимум за 24 часа до начала квиза. Оплата на месте или онлайн.'
     },
     {
-      title: 'Запрещено',
-      content: 'Использование телефонов и гаджетов во время игры. За нарушение — дисквалификация команды.'
-    },
-    {
       title: 'Призы',
       content: 'Топ-3 команды получают призы от наших партнёров и сертификаты в бар клуба.'
     }
@@ -377,7 +373,7 @@ const Index = () => {
                   <div>
                     <div className="font-semibold mb-1">Адрес</div>
                     <div className="text-muted-foreground text-sm">
-                      г. Москва, ул. Примерная, д. 123
+                      КИМ ул. 93, Пермь
                     </div>
                   </div>
                 </div>
@@ -386,26 +382,7 @@ const Index = () => {
                   <div>
                     <div className="font-semibold mb-1">Телефон</div>
                     <div className="text-muted-foreground text-sm">
-                      +7 (999) 123-45-67
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Mail" className="text-primary mt-1" size={20} />
-                  <div>
-                    <div className="font-semibold mb-1">Email</div>
-                    <div className="text-muted-foreground text-sm">
-                      brainshock@adameva.club
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="Clock" className="text-primary mt-1" size={20} />
-                  <div>
-                    <div className="font-semibold mb-1">Режим работы</div>
-                    <div className="text-muted-foreground text-sm">
-                      Пн-Чт: 18:00 - 02:00<br />
-                      Пт-Вс: 18:00 - 06:00
+                      +7 (342) 282-69-16
                     </div>
                   </div>
                 </div>
@@ -417,22 +394,14 @@ const Index = () => {
                 <CardTitle>Мы в соцсетях</CardTitle>
                 <CardDescription>Следи за новостями и анонсами</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Button variant="outline" className="w-full justify-start gap-3 h-12 hover:bg-primary/10 hover:border-primary">
-                  <Icon name="Instagram" size={20} />
-                  <span>@brainshock_quiz</span>
-                </Button>
-                <Button variant="outline" className="w-full justify-start gap-3 h-12 hover:bg-primary/10 hover:border-primary">
-                  <Icon name="Send" size={20} />
-                  <span>Telegram: @brainshock</span>
-                </Button>
-                <Button variant="outline" className="w-full justify-start gap-3 h-12 hover:bg-primary/10 hover:border-primary">
-                  <Icon name="Facebook" size={20} />
-                  <span>БрейнШок Квизы</span>
-                </Button>
-                <Button variant="outline" className="w-full justify-start gap-3 h-12 hover:bg-primary/10 hover:border-primary">
-                  <Icon name="Youtube" size={20} />
-                  <span>БрейнШок TV</span>
+              <CardContent>
+                <Button 
+                  variant="outline" 
+                  className="w-full justify-start gap-3 h-12 hover:bg-primary/10 hover:border-primary"
+                  onClick={() => window.open('https://vk.com/adamevaclubperm', '_blank')}
+                >
+                  <Icon name="Share2" size={20} />
+                  <span>ВКонтакте</span>
                 </Button>
               </CardContent>
             </Card>
